@@ -1,0 +1,504 @@
+/* 自定义样式，优化交互体验 */
+
+/* 主题变量 */
+:root {
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary-color: #64748b;
+  --background-color: #f8fafc;
+  --card-background: #ffffff;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+  --text-color: #1e293b;
+  --text-light: #64748b;
+}
+
+/* 全局样式重置 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* 代码块样式优化 */
+pre {
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+/* 代码块复制按钮样式 */
+div[class*="language-"] > button.copy {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 0 var(--border-radius);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+div[class*="language-"]:hover > button.copy {
+  opacity: 1;
+}
+
+/* 内容区域样式优化 */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 标题样式优化 */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-color);
+}
+
+/* 段落样式优化 */
+p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+/* 列表样式优化 */
+ul, ol {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: var(--text-light);
+}
+
+/* 链接样式优化 */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* 分类网格样式 */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 32px 0;
+}
+
+/* 分类卡片样式 */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 32px 24px;
+  text-align: center;
+  transition: var(--transition);
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+  text-decoration: none;
+}
+
+.category-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+  transform: scale(1.1);
+}
+
+.category-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.category-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* 技术栈样式 */
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 32px 0;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 24px 16px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.tech-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.tech-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.tech-item h4 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.tech-item p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* 响应式设计优化 */
+@media (max-width: 768px) {
+  main {
+    padding: 0 16px;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+  
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  
+  .category-card {
+    padding: 24px 16px;
+  }
+  
+  .category-icon {
+    font-size: 40px;
+  }
+  
+  .tech-stack {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+}
+
+/* 滚动条样式优化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 搜索框样式优化 */
+.search {
+  margin-bottom: 20px;
+}
+
+.VPNavSearch.search {
+  width: 100%;
+  max-width: 400px;
+}
+
+.VPNavSearch .DocSearch-Button {
+  width: 100%;
+  height: 40px;
+  border-radius: var(--border-radius);
+  background-color: var(--card-background);
+  border: 1px solid #e2e8f0;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+
+.VPNavSearch .DocSearch-Button:hover {
+  background-color: var(--card-background);
+  border-color: var(--primary-color);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.VPNavSearch .DocSearch-Button-Container {
+  height: 20px;
+}
+
+.VPNavSearch .DocSearch-Search-Icon {
+  height: 20px;
+  width: 20px;
+}
+
+/* 面包屑导航样式优化 */
+.breadcrumbs {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+/* 侧边栏样式优化 */
+.sidebar {
+  background-color: var(--card-background);
+}
+
+/* 导航栏样式优化 */
+.navbar {
+  background-color: var(--card-background);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero 区域样式优化 */
+.hero {
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--text-light);
+  margin-bottom: 32px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Features 区域样式优化 */
+.feature-list {
+  margin-top: 40px;
+}
+
+.feature-item {
+  margin-bottom: 32px;
+}
+
+.feature-item h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* 按钮样式优化 */
+.VPButton {
+  border-radius: var(--border-radius);
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.VPButton.brand {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.VPButton.brand:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.VPButton.alt {
+  background-color: var(--card-background);
+  border-color: #e2e8f0;
+  color: var(--text-color);
+}
+
+.VPButton.alt:hover {
+  background-color: #f1f5f9;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 页脚样式优化 */
+.footer {
+  background-color: var(--card-background);
+  padding: 40px 0 20px 0;
+  margin-top: 60px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* 首页布局优化 */
+.home {
+  padding: 40px 0;
+}
+
+/* 关于页样式优化 */
+.about-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-section {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 32px;
+  margin-bottom: 32px;
+  transition: var(--transition);
+}
+
+.about-section:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+.about-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: var(--text-color);
+}
+
+.about-section h3 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-size: 22px;
+  color: var(--text-color);
+}
+
+.about-section p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.about-section ul {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.about-section li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+/* 关于页技术栈样式 */
+.about-tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.about-tech-item {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.about-tech-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow);
+}
+
+.about-tech-item h4 {
+  margin: 8px 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.about-tech-item p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* 后续规划列表样式 */
+.plan-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.plan-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
+.plan-list li:before {
+  content: "📌";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
