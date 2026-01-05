@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.vuejs.org/config/app-configs
 export default defineConfig({
+  base: "/coder-interview/",
   title: '前端面试题库',
   description: '一个专注于前端面试题的静态网站，包含HTML/CSS、JavaScript、浏览器原理、前端框架等多个分类的面试题',
   head: [["link", { rel: "icon", href: "https://cdn-icons-png.flaticon.com/512/1088/1088493.png" }]],
@@ -130,7 +131,8 @@ export default defineConfig({
     // 生成静态站点
     outDir: '.vitepress/dist',
     // 启用源映射
-    sourcemap: false
+    sourcemap: false,
+    assetsDir: 'assets'
   },
   
   // 开发服务器配置
