@@ -7,7 +7,7 @@
     "build": "vitepress build interview-docs",
     "serve": "vitepress serve interview-docs",
     "deploy": "npm run build && gh-pages -d interview-docs/.vitepress/dist",
-    "dist": "vitepress build interview-docs && npx rimraf docs && npx cpr interview-docs/.vitepress/dist docs -o"
+    "dist": "npm run build && npx rimraf docs && npx cpr interview-docs/.vitepress/dist docs -o"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
