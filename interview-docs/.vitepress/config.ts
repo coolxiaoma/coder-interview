@@ -34,6 +34,7 @@ export default defineConfig({
             { text: '算法', link: '/interview/algorithm/' },
             { text: '网络', link: '/interview/network/' },
             { text: '设计模式', link: '/interview/design-patterns/' },
+            { text: '场景题', link: '/interview/scene/' },
             { text: '其他', link: '/interview/others/' }
           ]
         }

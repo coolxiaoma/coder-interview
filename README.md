@@ -60,7 +60,8 @@ npm run serve
 ## 📁 目录结构
 
 ```
-docs/
+docs - 部署目录
+interview-docs/
 ├── .vitepress/          # VitePress 配置目录
 │   ├── config.ts        # 主配置文件
 │   └── custom.css       # 自定义样式
