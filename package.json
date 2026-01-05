@@ -3,11 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs",
-    "deploy": "npm run build && gh-pages -d docs/.vitepress/dist",
-    "dist": "vitepress build docs && npx rimraf dist && npx cpr docs/.vitepress/dist dist -o"
+    "dev": "vitepress dev interview",
+    "build": "vitepress build interview",
+    "serve": "vitepress serve interview",
+    "deploy": "npm run build && gh-pages -d interview/.vitepress/dist",
+    "dist": "vitepress build interview && npx rimraf docs && npx cpr interview/.vitepress/dist docs -o"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
