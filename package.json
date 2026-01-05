@@ -6,12 +6,15 @@
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
-    "deploy": "npm run build && gh-pages -d docs/.vitepress/dist"
+    "deploy": "npm run build && gh-pages -d docs/.vitepress/dist",
+    "dist": "vitepress build docs && npx rimraf dist && npx cpr docs/.vitepress/dist dist -o"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
     "vitepress": "^1.6.4",
-    "vue": "^3.5.26"
+    "vue": "^3.5.26",
+    "rimraf": "^6.0.1",
+    "cpr": "^3.0.1"
   },
   "pnpm": {
     "peerDependencyRules": {
