@@ -49,6 +49,13 @@ Vue 实现 MVVM 模式的方式：
 
 Vue 通过双向数据绑定实现了 MVVM 模式，当 Model 中的数据变化时，ViewModel 会自动更新 View，当用户在 View 中进行操作时，ViewModel 会自动更新 Model。
 
+MVVM的优点:
+
+1.低耦合：视图(View)可以独立于Model变化和修改,一个Model可以绑定到不同的View上，当View变化的时候Model可以不变化，当Model变化的时候View也可以不变;
+2.可重用性：你可以把一些视图逻辑放在一个Model里面，让很多View重用这段视图逻辑。
+3.独立开发：开发人员可以专注于业务逻辑和数据的开发(ViewModel)，设计人员可以专注于页面设计。
+4.可测试：由于ViewModel层负责处理业务逻辑，因此可以对其进行单元测试。
+
 ## 4. Vue 中的数据绑定有哪些方式？
 
 ### 答案

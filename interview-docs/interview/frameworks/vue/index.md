@@ -5,6 +5,8 @@ Vue 是一套用于构建用户界面的渐进式 JavaScript 框架，易于学�
 ## 目录结构
 
 - [Vue 基础](./basic.md)：Vue 基础概念和核心特性
+- [高频面试题](./high-frequency.md)：Vue 高频面试题，帮助您准备面试
+- [无答案面试题（用于模拟面试）](./no-answer.md)：Vue 无答案面试题，模拟真实面试场景
 
 ## 学习资源
 
@@ -25,5 +27,6 @@ Vue 是一套用于构建用户界面的渐进式 JavaScript 框架，易于学�
 <summary>点击展开所有 Vue 面试题</summary>
 
 - [Vue 基础](./basic.md)
-
+- [高频面试题](./high-frequency.md)
+- [无答案面试题（用于模拟面试）](./no-answer.md)
 </details>

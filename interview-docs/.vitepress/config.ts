@@ -101,10 +101,10 @@ export default defineConfig({
     },
     
     // 编辑链接（如果需要）
-    editLink: {
-      pattern: 'https://github.com/yourusername/your-repo/edit/main/docs/:path',
-      text: '编辑此页面'
-    }
+    // editLink: {
+    //   pattern: 'https://github.com/yourusername/your-repo/edit/main/docs/:path',
+    //   text: '编辑此页面'
+    // }
   },
   
   // CSS 配置
